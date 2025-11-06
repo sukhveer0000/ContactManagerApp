@@ -24,4 +24,7 @@ This project demonstrates clean Android architecture practices using **ViewModel
 ---
 
 ## 📂 Project Structure
-
+- Model/ → Entity class (Contact) and DAO interface
+- Repository/ → Repository layer for data operations
+- ViewModel/ → ViewModel to handle business logic
+- UI/ → Activities and Fragments for the app UI
