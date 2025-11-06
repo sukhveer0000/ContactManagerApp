@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/recentFrag">
+
+    <fragment
+        android:id="@+id/favouriteFrag"
+        android:name="com.example.contactapp.FavouriteFrag"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/recentFrag"
+        android:name="com.example.contactapp.RecentFrag"
+        android:label="fragment_recent"
+        tools:layout="@layout/fragment_recent" >
+        <action
+            android:id="@+id/action_recentFrag_to_favouriteFrag"
+            app:destination="@id/favouriteFrag" />
+        <action
+            android:id="@+id/action_recentFrag_to_contactsFrag"
+            app:destination="@id/contactsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFrag"
+        android:name="com.example.contactapp.ContactsFrag"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+</navigation>
